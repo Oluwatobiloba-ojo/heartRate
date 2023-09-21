@@ -1,3 +1,5 @@
+package makingDiff;
+
 public class HeartRate {
 
     private String firstName;
@@ -66,33 +68,28 @@ public class HeartRate {
         maximumHeart = minute - calculateAge();
         return maximumHeart;
     }
-
-    public int getMaximumHeartRate() {
-        return (int) maximumHeartRate();
-    }
-
-    public void TargetMaximumRate(int excercise) {
+    public double TargetMaximumRate(int excercise) {
+        double targetMaximumRange1 = 0;
         if (excercise == 50) {
-            this.targetMaximumRange1 = maximumHeartRate() * 0.50;
+            targetMaximumRange1 = maximumHeartRate() * 0.50;
         }
         if (excercise == 70) {
-            this.targetMaximumRange1 = maximumHeartRate() * 0.70;
+            targetMaximumRange1 = maximumHeartRate() * 0.70;
         }
-    }
-    public double getTargetMaximumRange1(){
-        return targetMaximumRange1;
+        String theTarget =  String.format("%.2f", targetMaximumRange1);
+        return Double.parseDouble(theTarget);
     }
 
-    public void TargetMaximumRate2(int excercise2) {
+    public double TargetMaximumRate2(int excercise2) {
+        double targetMaximumRange2 = 0;
         if (excercise2 == 70) {
-            this.targetMaximumRange2 = maximumHeartRate() * 0.70;
+            targetMaximumRange2 = maximumHeartRate() * 0.70;
         }
         if (excercise2 == 85) {
-            this.targetMaximumRange2 = maximumHeartRate() * 0.85;
+            targetMaximumRange2 = maximumHeartRate() * 0.85;
         }
-    }
-    public double getTargetMaximumRange2(){
-        return targetMaximumRange2;
+        String theTarget =  String.format("%.2f", targetMaximumRange2);
+        return Double.parseDouble(theTarget);
     }
 
 }
